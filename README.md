@@ -2,7 +2,7 @@
 
 ## Author: As'har Oran
 ## Links and Resources
-* PR : [https://github.com/asharoran-401-advanced-javascript/lab-05/pull/1]
+* PR : [https://github.com/asharoran-401-advanced-javascript/lab-08-expressRouting-connectingApi/pull/1]
 * ci/cd : [https://github.com/asharoran-401-advanced-javascript/lab-08-expressRouting-connectingApi/actions]
 ##  Setup
 - install jest eslint mongo mongoose supergoose express dotenv cors
@@ -14,4 +14,4 @@
 npm run test
 npm test 
 ## UML
-image : [https://github.com/asharoran-401-advanced-javascript/lab-05/blob/lab-5/assets/lab-05.jpg]
+image : []
