@@ -12,4 +12,4 @@ class Products extends Model{
   }
 }
 
-module.exports = new Products();
+module.exports =  Products;

@@ -8,8 +8,8 @@ const category = require('../models/category/category-model.js');
 const router = express.router();
 
 //=========================== CATEGORY ======================//
-router.get('/category' , getCategory);
-router.post('/category' , postCatergory);
+router.get('/categories' , getCategory);
+router.post('/categories' , postCatergory);
 // router.put('/category' , updateCategory);
 // router.delete('/category' , deleteCategory);
 

@@ -12,4 +12,4 @@ class Categories extends Model {
   }
 }
 
-module.exports = new Categories();
+module.exports =  Categories;
