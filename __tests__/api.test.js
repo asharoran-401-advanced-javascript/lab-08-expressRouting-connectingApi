@@ -6,6 +6,25 @@ const supergoose = require('@code-fellows/supergoose');
 const mockRequest = supergoose(server);
 
 describe('Model API', () => {
+  return mockRequest
+    .get('/some-route-that-doesnt-exist')
+    .then(results =>{
+      expect(results.status).toBe(404);
+    })
+    .catch(console.error);
+});
+
+describe('web server', () => {
+  it('responds with a 500 on error', () => {
+    return mockRequest
+      .get('/real-error')
+      .then(results =>{
+        expect(results.status).toBe(500);
+      })
+      .catch(console.error);
+  });
+
+
   it('Can Read an items GET() from DB to valid Category ' , () =>{ // to read the items in DB
     return mockRequest
       .get('/api/v1/categories')
@@ -79,7 +98,7 @@ it('Can Read an items GET() from DB to Product model' , () =>{ // to read the it
 //     .post('/api/v1/products')
 //     .send(testObj)
 //     .then( results =>{
-//       expect(results.status).toBe(201);
+//       expect(results.status).toBe(500);
 //       console.log('-----my new Obj ------' , results.body.category);
 //       expect(results.body.category).toBe(testObj.category);
 //     });

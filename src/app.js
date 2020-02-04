@@ -48,9 +48,7 @@ app.get('/api/v1/products/:id', getProduct);
 app.put('/api/v1/products/:id', putProducts);
 app.delete('/api/v1/products/:id', deleteProducts);
 
-// Catchalls
-app.use(notFound);
-app.use(errorHandler);
+
 
 // ROUTE HANDLER FUNCTIONS
 function getCategories(request, response, next) {
@@ -138,7 +136,9 @@ function deleteProducts(request, response, next) {
     .catch(next);
 }
 
-
+// Catchalls
+app.use(notFound);
+app.use(errorHandler);
 
 module.exports = {
   server: app,
