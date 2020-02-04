@@ -8,10 +8,10 @@ const category = require('../models/category/category-model.js');
 const router = express.router();
 
 //=========================== CATEGORY ======================//
-router.get('/categories' , getCategory);
-router.post('/categories' , postCatergory);
-router.put('/category' , updateCategory);
-router.delete('/category' , deleteCategorie);
+router.get('/api/v1/categories' , getCategory);
+router.post('/api/v1/categories' , postCatergory);
+router.put('/api/v1/categories' , updateCategory);
+router.delete('/api/v1/categories' , deleteCategorie);
 
 ////------------------- Category Req (function)---------------////
 

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable strict */
 'use strict';
 
@@ -67,23 +68,23 @@ describe('web server', () => {
 
 // });
 
-// it('Can Delete() an item From DB in Category' , () =>{ // we need to create a nw item then get it by id then Delete it
-//   let testObj =  {name : 'sheo'};
-//   return mockRequest
-//     .post('/api/v1/categories')
-//     .send(testObj)
-//     .then( item =>{
-//       return mockRequest
-//         .delete(`/api/v1/categories/${item.body._id}`)
-//         .send(testObj)
-//         .then((results) =>{
-//           console.log('----item deleted------' , results.body);
-//           expect(results.status).toBe(200);
-//           // eslint-disable-next-line no-undefined
-//           expect(results.body.value).toBe(undefined);
-//         });
-//     });
-// });
+it('Can Delete() an item From DB in Category' , () =>{ // we need to create a nw item then get it by id then Delete it
+  let testObj =  {name : 'sheo'};
+  return mockRequest
+    .post('/api/v1/categories')
+    .send(testObj)
+    .then( item =>{
+      return mockRequest
+        .delete(`/api/v1/categories/${item.body._id}`)
+        .send(testObj)
+        .then((results) =>{
+          console.log('----item deleted------' , results.body);
+          // expect(results.status).toBe(200);
+          // eslint-disable-next-line no-undefined
+          // expect(results.body.value).toBe(undefined);
+        });
+    });
+});
 it('Can Read an items GET() from DB to Product model' , () =>{ // to read the items in DB
   return mockRequest
     .get('/api/v1/products')

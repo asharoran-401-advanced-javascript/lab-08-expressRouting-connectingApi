@@ -9,10 +9,10 @@ const router = express.router();
 
 //======================== PRODUCT ==========================//
 
-router.get('/product' , getProduct);
-router.post('/product' , postProduct);
-router.put('/product' , updateProduct);
-router.delete('/product' , deleteProduct);
+router.get('/api/v1/products' , getProduct);
+router.post('/api/v1/products' , postProduct);
+router.put('/api/v1/products' , updateProduct);
+router.delete('/api/v1/products' , deleteProduct);
 
 ////------------------- Product Req (function)---------------////
 

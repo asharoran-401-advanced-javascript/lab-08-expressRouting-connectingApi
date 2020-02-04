@@ -14,4 +14,4 @@
 npm run test
 npm test 
 ## UML
-image : ![option test](assets/lab 8.jpg)
+image : ![Optional Text](assets/lab 8.jpg)
